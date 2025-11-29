@@ -44,6 +44,30 @@ The application supports exporting training plans as PDFs. This feature relies o
 1. Ensure all dependencies are installed (`npm install`).
 2. Try the "Print" button as a fallback, which uses the browser's native print-to-PDF capability.
 
+## Continuous Integration
+
+The project uses GitHub Actions for Continuous Integration (CI). The workflow is defined in `.github/workflows/ci.yml`.
+
+### Triggers
+- **Push**: To the `main` branch.
+- **Pull Request**: To the `main` branch.
+
+### Checks
+The CI pipeline runs the following checks on `ubuntu-latest` with Node.js 20:
+1. **Linting**: `npm run lint` - Checks for code quality and formatting issues.
+2. **Build**: `npm run build` - Verifies that the application builds successfully.
+
+### Running Checks Locally
+You can run the same checks locally to ensure your changes will pass CI:
+
+```bash
+# Run linting
+npm run lint
+
+# Run build
+npm run build
+```
+
 ## Deployment
 
 You can deploy the contents of the `out/` directory to any static hosting service:
