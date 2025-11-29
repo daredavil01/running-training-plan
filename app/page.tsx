@@ -1,197 +1,118 @@
 'use client';
 
-import { useState } from 'react';
-import InputForm from '@/components/InputForm';
-import TrainingResults from '@/components/TrainingResults';
-import WeeklySchedule from '@/components/WeeklySchedule';
-import MileageProgression from '@/components/MileageProgression';
+import Link from 'next/link';
 import DarkModeToggle from '@/components/DarkModeToggle';
-import { calculateTrainingPlan, TrainingPlan } from '@/lib/paceCalculator';
-import { generateWeeklySchedule, WorkoutDay } from '@/lib/scheduleGenerator';
-import { generateWeeklyMileage, WeeklyMileage } from '@/lib/mileageGenerator';
-import { exportToPDF, printTrainingPlan } from '@/lib/pdfExport';
 
 export default function Home() {
-  const [trainingPlan, setTrainingPlan] = useState<TrainingPlan | null>(null);
-  const [weeklySchedule, setWeeklySchedule] = useState<WorkoutDay[] | null>(null);
-  const [weeklyMileage, setWeeklyMileage] = useState<WeeklyMileage[] | null>(null);
-  const [raceType, setRaceType] = useState<'half-marathon' | 'full-marathon'>('half-marathon');
-  const [showResults, setShowResults] = useState(false);
-  const [isExporting, setIsExporting] = useState(false);
-
-  const handleFormSubmit = (
-    timeInMinutes: number,
-    isTimeFor10K: boolean,
-    selectedRaceType: 'half-marathon' | 'full-marathon'
-  ) => {
-    const plan = calculateTrainingPlan(timeInMinutes, isTimeFor10K);
-    
-    if (plan) {
-      setTrainingPlan(plan);
-      setRaceType(selectedRaceType);
-      const schedule = generateWeeklySchedule(plan, selectedRaceType);
-      setWeeklySchedule(schedule);
-      const mileage = generateWeeklyMileage(selectedRaceType);
-      setWeeklyMileage(mileage);
-      setShowResults(true);
-      
-      // Scroll to results
-      setTimeout(() => {
-        document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  };
-
-  const handleReset = () => {
-    setShowResults(false);
-    setTrainingPlan(null);
-    setWeeklySchedule(null);
-    setWeeklyMileage(null);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleExportPDF = async () => {
-    setIsExporting(true);
-    const raceTypeName = raceType === 'half-marathon' ? 'Half-Marathon' : 'Full-Marathon';
-    const fileName = `${raceTypeName}-Training-Plan.pdf`;
-    const success = await exportToPDF('results', fileName);
-    setIsExporting(false);
-    
-    if (!success) {
-      alert('Failed to export PDF. Please try again or use the Print option.');
-    }
-  };
-
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-12 px-3 sm:px-4 transition-colors duration-300">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
       <DarkModeToggle />
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-3 sm:mb-4 px-2">
-            🏃 Get Me My Training Plan! 🏃
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
-            Enter your time trial results and get a personalized training plan with target paces,
-            predicted race times, and a weekly training schedule
-          </p>
-        </div>
-
-        {/* Input Form */}
-        <div className="mb-8 sm:mb-12">
-          <InputForm onSubmit={handleFormSubmit} />
-        </div>
-
-        {/* Results Section */}
-        {showResults && trainingPlan && weeklySchedule && weeklyMileage && (
-          <div id="results" className="space-y-8">
-            {/* Reset Button */}
-            <div className="text-center no-print">
-              <button
-                onClick={handleReset}
-                className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition duration-200 shadow-lg text-sm sm:text-base"
-              >
-                ← Start Over
-              </button>
-            </div>
-
-            {/* Print Header - only visible when printing */}
-            <div className="hidden print:block mb-8 text-center border-b-2 border-gray-300 pb-4">
-              <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                🏃 Get Me My Training Plan! 🏃
-              </h1>
-              <p className="text-lg text-gray-600">
-                Your Personalized {raceType === 'half-marathon' ? 'Half Marathon' : 'Full Marathon'} Training Plan
-              </p>
-              <p className="text-sm text-gray-500 mt-2">
-                Generated on {new Date().toLocaleDateString()}
-              </p>
-            </div>
-
-            {/* Training Results */}
-            <TrainingResults plan={trainingPlan} raceType={raceType} />
-
-            {/* Weekly Schedule */}
-            <WeeklySchedule schedule={weeklySchedule} raceType={raceType} />
-
-            {/* Weekly Mileage Progression */}
-            <MileageProgression mileage={weeklyMileage} raceType={raceType} />
-
-            {/* Export Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 no-print px-4">
-              <button
-                onClick={printTrainingPlan}
-                className="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-bold py-3 px-6 sm:px-8 rounded-lg transition duration-200 shadow-lg flex items-center justify-center gap-2 text-sm sm:text-base"
-              >
-                🖨️ Print Training Plan
-              </button>
-              <button
-                onClick={handleExportPDF}
-                disabled={isExporting}
-                className={`bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 sm:px-8 rounded-lg transition duration-200 shadow-lg flex items-center justify-center gap-2 text-sm sm:text-base ${
-                  isExporting ? 'opacity-50 cursor-not-allowed' : ''
-                }`}
-              >
-                {isExporting ? (
-                  <>
-                    <span className="animate-spin">⏳</span> Generating PDF...
-                  </>
-                ) : (
-                  <>📄 Export as PDF</>
-                )}
-              </button>
-            </div>
-
-            {/* Footer */}
-            <div className="text-center mt-12 p-6 bg-white rounded-lg shadow-lg">
-              <p className="text-gray-600 mb-2">
-                <strong>Disclaimer:</strong> This training plan is for informational purposes only.
-                Always consult with a healthcare professional before starting any new training program.
-              </p>
-              <p className="text-gray-500 text-sm">
-                Training plans are based on general running performance data and may vary based on
-                individual fitness, experience, and environmental conditions.
-              </p>
-            </div>
-          </div>
-        )}
-
-        {/* How it Works Section */}
-        {!showResults && (
-          <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">How It Works</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-4xl mb-3">📝</div>
-                <h3 className="font-bold text-gray-800 mb-2">1. Enter Your Time</h3>
-                <p className="text-gray-600 text-sm">
-                  Input your recent 5K or 10K time trial result
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-3">🎯</div>
-                <h3 className="font-bold text-gray-800 mb-2">2. Choose Your Goal</h3>
-                <p className="text-gray-600 text-sm">
-                  Select whether you&apos;re training for a half or full marathon
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-3">🏆</div>
-                <h3 className="font-bold text-gray-800 mb-2">3. Get Your Plan</h3>
-                <p className="text-gray-600 text-sm">
-                  Receive personalized paces, times, and a weekly training schedule
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
       
-      {/* Footer */}
-      <footer className="mt-12 text-center text-gray-500 dark:text-gray-400 text-sm pb-4">
-        Created with ❤️ By <a href="https://linktr.ee/daredavil" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400">Sanket Tambare</a>
-      </footer>
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6">
+              <span className="block">Unlock Your Potential</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Through Movement
+              </span>
+            </h1>
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-300">
+              Exercise is not just about physical fitness; it&apos;s a catalyst for a healthier mind, 
+              a stronger body, and a more vibrant life.
+            </p>
+            <div className="mt-10 flex justify-center gap-4">
+              <Link
+                href="/training-plan"
+                className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                Get Your Training Plan
+              </Link>
+              <Link
+                href="/about"
+                className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10 transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Importance of Exercise Section */}
+      <div className="py-16 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+              Why Exercise Matters
+            </h2>
+            <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
+              In our modern sedentary lifestyle, movement is more crucial than ever.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Mental Clarity</h3>
+              <p className="text-gray-500 dark:text-gray-400">
+                Regular physical activity boosts cognitive function, reduces stress, and improves sleep quality.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
+              <div className="text-4xl mb-4">❤️</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Physical Health</h3>
+              <p className="text-gray-500 dark:text-gray-400">
+                Strengthens your heart, muscles, and bones while reducing the risk of chronic diseases.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Energy Boost</h3>
+              <p className="text-gray-500 dark:text-gray-400">
+                Increases endurance and overall energy levels, helping you tackle daily challenges with vigor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Guidelines Section */}
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-2xl overflow-hidden">
+            <div className="px-6 py-12 sm:px-12 text-center text-white">
+              <h2 className="text-3xl font-extrabold mb-6">Recommended Activity Guidelines</h2>
+              <p className="text-xl mb-8 opacity-90">
+                According to major health organizations, adults should aim for:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                  <div className="text-5xl font-bold mb-2">150</div>
+                  <div className="text-lg font-medium">Minutes Per Week</div>
+                  <div className="text-sm opacity-80 mt-2">of Moderate-Intensity Activity<br/>(Brisk Walking)</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                  <div className="text-5xl font-bold mb-2">75</div>
+                  <div className="text-lg font-medium">Minutes Per Week</div>
+                  <div className="text-sm opacity-80 mt-2">of Vigorous-Intensity Activity<br/>(Running/Jogging)</div>
+                </div>
+              </div>
+              <p className="mt-8 text-sm opacity-75">
+                *Or an equivalent combination of both. Muscle-strengthening activities are also recommended at least 2 days a week.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </main>
   );
 }
-
