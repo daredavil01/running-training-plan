@@ -186,6 +186,11 @@ export default function Home() {
           </div>
         )}
       </div>
+      
+      {/* Footer */}
+      <footer className="mt-12 text-center text-gray-500 dark:text-gray-400 text-sm pb-4">
+        Created with ❤️ By <a href="https://linktr.ee/daredavil" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400">Sanket Tambare</a>
+      </footer>
     </main>
   );
 }
