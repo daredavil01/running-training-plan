@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #1f2937;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(255, 255, 255)
+    )
+    rgb(214, 219, 220);
+}
+
+/* Dark mode styles */
+.dark body {
+  color: #e5e7eb;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(17, 24, 39)
+    )
+    rgb(31, 41, 55);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Ensure content fits on page */
+  .print-container {
+    page-break-inside: avoid;
+  }
+  
+  /* Add page breaks between sections */
+  .print-section {
+    page-break-after: auto;
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+  
+  /* Optimize table printing */
+  table {
+    page-break-inside: avoid;
+  }
+  
+  /* Ensure colors show in print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  /* Hide backgrounds for better printing */
+  .bg-gradient-to-br,
+  .bg-gradient-to-r {
+    background: white !important;
+  }
+  
+  /* Adjust margins for print */
+  @page {
+    margin: 1cm;
+    size: A4;
+  }
+  
+  /* Make sure charts and visualizations print well */
+  .rounded-full {
+    border: 1px solid #ddd;
+  }
+}
+

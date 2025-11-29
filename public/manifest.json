@@ -1,0 +1,46 @@
+{
+  "name": "Get me my training plan!",
+  "short_name": "Training Plan",
+  "description": "Personalized running training plans based on your time trial results. Get detailed interval paces, tempo runs, and weekly schedules for half-marathon and full-marathon training.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["health", "fitness", "sports"],
+  "shortcuts": [
+    {
+      "name": "Create Training Plan",
+      "short_name": "New Plan",
+      "description": "Start creating a new training plan",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
+

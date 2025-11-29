@@ -1,0 +1,577 @@
+{
+  "data": [
+    {
+      "fiveKTime": 20,
+      "intervals": {
+        "400M": "0:01:27",
+        "600M": "0:02:12",
+        "800M": "0:02:57",
+        "1000M": "0:03:43",
+        "1200M": "0:04:32",
+        "1600M": "0:06:10",
+        "2000M": "0:07:48"
+      },
+      "tempo": {
+        "short": "0:04:10",
+        "mid": "0:04:20",
+        "long": "0:04:29"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:04:24",
+        "fullMarathonPace": "0:04:37"
+      },
+      "completionTimes": {
+        "10K": "0:41:51",
+        "halfMarathon": "1:32:42",
+        "fullMarathon": "3:14:37"
+      }
+    },
+    {
+      "fiveKTime": 21,
+      "intervals": {
+        "400M": "0:01:31",
+        "600M": "0:02:19",
+        "800M": "0:03:07",
+        "1000M": "0:03:55",
+        "1200M": "0:04:46",
+        "1600M": "0:06:30",
+        "2000M": "0:08:12"
+      },
+      "tempo": {
+        "short": "0:04:22",
+        "mid": "0:04:32",
+        "long": "0:04:41"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:04:37",
+        "fullMarathonPace": "0:04:51"
+      },
+      "completionTimes": {
+        "10K": "0:43:56",
+        "halfMarathon": "1:37:20",
+        "fullMarathon": "3:24:21"
+      }
+    },
+    {
+      "fiveKTime": 22,
+      "intervals": {
+        "400M": "0:01:36",
+        "600M": "0:02:26",
+        "800M": "0:03:16",
+        "1000M": "0:04:08",
+        "1200M": "0:05:01",
+        "1600M": "0:06:49",
+        "2000M": "0:08:36"
+      },
+      "tempo": {
+        "short": "0:04:34",
+        "mid": "0:04:44",
+        "long": "0:04:53"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:04:50",
+        "fullMarathonPace": "0:05:04"
+      },
+      "completionTimes": {
+        "10K": "0:46:02",
+        "halfMarathon": "1:41:58",
+        "fullMarathon": "3:34:05"
+      }
+    },
+    {
+      "fiveKTime": 23,
+      "intervals": {
+        "400M": "0:01:41",
+        "600M": "0:02:34",
+        "800M": "0:03:26",
+        "1000M": "0:04:20",
+        "1200M": "0:05:15",
+        "1600M": "0:07:08",
+        "2000M": "0:09:00"
+      },
+      "tempo": {
+        "short": "0:04:46",
+        "mid": "0:04:56",
+        "long": "0:05:05"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:05:03",
+        "fullMarathonPace": "0:05:18"
+      },
+      "completionTimes": {
+        "10K": "0:48:07",
+        "halfMarathon": "1:46:36",
+        "fullMarathon": "3:43:49"
+      }
+    },
+    {
+      "fiveKTime": 24,
+      "intervals": {
+        "400M": "0:01:46",
+        "600M": "0:02:41",
+        "800M": "0:03:36",
+        "1000M": "0:04:32",
+        "1200M": "0:05:30",
+        "1600M": "0:07:27",
+        "2000M": "0:09:24"
+      },
+      "tempo": {
+        "short": "0:04:58",
+        "mid": "0:05:08",
+        "long": "0:05:17"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:05:16",
+        "fullMarathonPace": "0:05:32"
+      },
+      "completionTimes": {
+        "10K": "0:50:13",
+        "halfMarathon": "1:51:14",
+        "fullMarathon": "3:53:33"
+      }
+    },
+    {
+      "fiveKTime": 24.4,
+      "intervals": {
+        "400M": "",
+        "600M": "",
+        "800M": "",
+        "1000M": "",
+        "1200M": "",
+        "1600M": "",
+        "2000M": ""
+      },
+      "tempo": {
+        "short": "0:05:06",
+        "mid": "0:05:16",
+        "long": "0:05:25"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:05:25",
+        "fullMarathonPace": "0:05:41"
+      },
+      "completionTimes": {
+        "10K": "0:51:36",
+        "halfMarathon": "1:54:20",
+        "fullMarathon": "4:00:02"
+      }
+    },
+    {
+      "fiveKTime": 25,
+      "intervals": {
+        "400M": "0:01:51",
+        "600M": "0:02:48",
+        "800M": "0:03:45",
+        "1000M": "0:04:44",
+        "1200M": "0:05:44",
+        "1600M": "0:07:47",
+        "2000M": "0:09:48"
+      },
+      "tempo": {
+        "short": "0:05:10",
+        "mid": "0:05:20",
+        "long": "0:05:29"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:05:30",
+        "fullMarathonPace": "0:05:46"
+      },
+      "completionTimes": {
+        "10K": "0:52:18",
+        "halfMarathon": "1:55:53",
+        "fullMarathon": "4:03:17"
+      }
+    },
+    {
+      "fiveKTime": 26,
+      "intervals": {
+        "400M": "0:01:56",
+        "600M": "0:02:55",
+        "800M": "0:03:55",
+        "1000M": "0:04:56",
+        "1200M": "0:05:59",
+        "1600M": "0:08:06",
+        "2000M": "0:10:13"
+      },
+      "tempo": {
+        "short": "0:05:22",
+        "mid": "0:05:32",
+        "long": "0:05:41"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:05:43",
+        "fullMarathonPace": "0:06:00"
+      },
+      "completionTimes": {
+        "10K": "0:54:24",
+        "halfMarathon": "2:00:31",
+        "fullMarathon": "4:13:01"
+      }
+    },
+    {
+      "fiveKTime": 27,
+      "intervals": {
+        "400M": "0:02:00",
+        "600M": "0:03:03",
+        "800M": "0:04:05",
+        "1000M": "0:05:08",
+        "1200M": "0:06:13",
+        "1600M": "0:08:25",
+        "2000M": "0:10:37"
+      },
+      "tempo": {
+        "short": "0:05:34",
+        "mid": "0:05:44",
+        "long": "0:05:53"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:05:56",
+        "fullMarathonPace": "0:06:14"
+      },
+      "completionTimes": {
+        "10K": "0:56:29",
+        "halfMarathon": "2:05:09",
+        "fullMarathon": "4:22:44"
+      }
+    },
+    {
+      "fiveKTime": 28,
+      "intervals": {
+        "400M": "0:02:05",
+        "600M": "0:03:10",
+        "800M": "0:04:14",
+        "1000M": "0:05:20",
+        "1200M": "0:06:28",
+        "1600M": "0:08:45",
+        "2000M": "0:11:01"
+      },
+      "tempo": {
+        "short": "0:05:46",
+        "mid": "0:05:56",
+        "long": "0:06:05"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:06:09",
+        "fullMarathonPace": "0:06:27"
+      },
+      "completionTimes": {
+        "10K": "0:58:35",
+        "halfMarathon": "2:09:47",
+        "fullMarathon": "4:32:28"
+      }
+    },
+    {
+      "fiveKTime": 29,
+      "intervals": {
+        "400M": "0:02:10",
+        "600M": "0:03:17",
+        "800M": "0:04:24",
+        "1000M": "0:05:32",
+        "1200M": "0:06:42",
+        "1600M": "0:09:04",
+        "2000M": "0:11:25"
+      },
+      "tempo": {
+        "short": "0:05:58",
+        "mid": "0:06:08",
+        "long": "0:06:17"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:06:22",
+        "fullMarathonPace": "0:06:41"
+      },
+      "completionTimes": {
+        "10K": "1:00:40",
+        "halfMarathon": "2:14:25",
+        "fullMarathon": "4:42:12"
+      }
+    },
+    {
+      "fiveKTime": 30,
+      "intervals": {
+        "400M": "0:02:15",
+        "600M": "0:03:24",
+        "800M": "0:04:34",
+        "1000M": "0:05:44",
+        "1200M": "0:06:57",
+        "1600M": "0:09:23",
+        "2000M": "0:11:49"
+      },
+      "tempo": {
+        "short": "0:06:10",
+        "mid": "0:06:20",
+        "long": "0:06:29"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:06:35",
+        "fullMarathonPace": "0:06:55"
+      },
+      "completionTimes": {
+        "10K": "1:02:46",
+        "halfMarathon": "2:19:03",
+        "fullMarathon": "4:51:56"
+      }
+    },
+    {
+      "fiveKTime": 31,
+      "intervals": {
+        "400M": "0:02:20",
+        "600M": "0:03:31",
+        "800M": "0:04:43",
+        "1000M": "0:05:56",
+        "1200M": "0:07:11",
+        "1600M": "0:09:43",
+        "2000M": "0:12:13"
+      },
+      "tempo": {
+        "short": "0:06:22",
+        "mid": "0:06:32",
+        "long": "0:06:41"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:06:49",
+        "fullMarathonPace": "0:07:09"
+      },
+      "completionTimes": {
+        "10K": "1:04:52",
+        "halfMarathon": "2:23:41",
+        "fullMarathon": "5:01:40"
+      }
+    },
+    {
+      "fiveKTime": 32,
+      "intervals": {
+        "400M": "0:02:24",
+        "600M": "0:03:39",
+        "800M": "0:04:53",
+        "1000M": "0:06:08",
+        "1200M": "0:07:25",
+        "1600M": "0:10:02",
+        "2000M": "0:12:37"
+      },
+      "tempo": {
+        "short": "0:06:34",
+        "mid": "0:06:44",
+        "long": "0:06:53"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:07:02",
+        "fullMarathonPace": "0:07:23"
+      },
+      "completionTimes": {
+        "10K": "1:06:57",
+        "halfMarathon": "2:28:19",
+        "fullMarathon": "5:11:24"
+      }
+    },
+    {
+      "fiveKTime": 33,
+      "intervals": {
+        "400M": "0:02:29",
+        "600M": "0:03:46",
+        "800M": "0:05:03",
+        "1000M": "0:06:20",
+        "1200M": "0:07:40",
+        "1600M": "0:10:21",
+        "2000M": "0:13:02"
+      },
+      "tempo": {
+        "short": "0:06:46",
+        "mid": "0:06:56",
+        "long": "0:07:05"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:07:15",
+        "fullMarathonPace": "0:07:37"
+      },
+      "completionTimes": {
+        "10K": "1:09:03",
+        "halfMarathon": "2:32:57",
+        "fullMarathon": "5:21:08"
+      }
+    },
+    {
+      "fiveKTime": 34,
+      "intervals": {
+        "400M": "0:02:34",
+        "600M": "0:03:53",
+        "800M": "0:05:12",
+        "1000M": "0:06:32",
+        "1200M": "0:07:54",
+        "1600M": "0:10:41",
+        "2000M": "0:13:26"
+      },
+      "tempo": {
+        "short": "0:06:58",
+        "mid": "0:07:08",
+        "long": "0:07:17"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:07:28",
+        "fullMarathonPace": "0:07:50"
+      },
+      "completionTimes": {
+        "10K": "1:11:08",
+        "halfMarathon": "2:37:38",
+        "fullMarathon": "5:30:52"
+      }
+    },
+    {
+      "fiveKTime": 35,
+      "intervals": {
+        "400M": "0:02:39",
+        "600M": "0:04:00",
+        "800M": "0:05:22",
+        "1000M": "0:06:44",
+        "1200M": "0:08:09",
+        "1600M": "0:11:00",
+        "2000M": "0:13:50"
+      },
+      "tempo": {
+        "short": "0:07:10",
+        "mid": "0:07:20",
+        "long": "0:07:29"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:07:41",
+        "fullMarathonPace": "0:08:04"
+      },
+      "completionTimes": {
+        "10K": "1:13:14",
+        "halfMarathon": "2:42:14",
+        "fullMarathon": "5:40:35"
+      }
+    },
+    {
+      "fiveKTime": 36,
+      "intervals": {
+        "400M": "0:02:44",
+        "600M": "0:04:08",
+        "800M": "0:05:32",
+        "1000M": "0:06:57",
+        "1200M": "0:08:23",
+        "1600M": "0:11:19",
+        "2000M": "0:14:14"
+      },
+      "tempo": {
+        "short": "0:07:22",
+        "mid": "0:07:32",
+        "long": "0:07:41"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:07:55",
+        "fullMarathonPace": "0:08:18"
+      },
+      "completionTimes": {
+        "10K": "1:15:19",
+        "halfMarathon": "2:46:52",
+        "fullMarathon": "5:50:19"
+      }
+    },
+    {
+      "fiveKTime": 37,
+      "intervals": {
+        "400M": "0:02:49",
+        "600M": "0:04:15",
+        "800M": "0:05:40",
+        "1000M": "0:07:07",
+        "1200M": "0:08:35",
+        "1600M": "0:11:35",
+        "2000M": "0:14:34"
+      },
+      "tempo": {
+        "short": "0:07:34",
+        "mid": "0:07:44",
+        "long": "0:07:53"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:08:08",
+        "fullMarathonPace": "0:08:32"
+      },
+      "completionTimes": {
+        "10K": "1:17:25",
+        "halfMarathon": "2:51:30",
+        "fullMarathon": "6:00:03"
+      }
+    },
+    {
+      "fiveKTime": 38,
+      "intervals": {
+        "400M": "0:02:53",
+        "600M": "0:04:22",
+        "800M": "0:05:51",
+        "1000M": "0:07:21",
+        "1200M": "0:08:52",
+        "1600M": "0:11:58",
+        "2000M": "0:15:02"
+      },
+      "tempo": {
+        "short": "0:07:46",
+        "mid": "0:07:56",
+        "long": "0:08:05"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:08:21",
+        "fullMarathonPace": "0:08:46"
+      },
+      "completionTimes": {
+        "10K": "1:19:30",
+        "halfMarathon": "2:56:08",
+        "fullMarathon": "6:09:47"
+      }
+    },
+    {
+      "fiveKTime": 39,
+      "intervals": {
+        "400M": "0:02:58",
+        "600M": "0:04:29",
+        "800M": "0:06:01",
+        "1000M": "0:07:33",
+        "1200M": "0:09:07",
+        "1600M": "0:12:17",
+        "2000M": "0:15:26"
+      },
+      "tempo": {
+        "short": "0:07:58",
+        "mid": "0:08:08",
+        "long": "0:08:17"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:08:34",
+        "fullMarathonPace": "0:09:00"
+      },
+      "completionTimes": {
+        "10K": "1:21:36",
+        "halfMarathon": "3:00:46",
+        "fullMarathon": "6:19:31"
+      }
+    },
+    {
+      "fiveKTime": 40,
+      "intervals": {
+        "400M": "0:03:03",
+        "600M": "0:04:37",
+        "800M": "0:06:10",
+        "1000M": "0:07:45",
+        "1200M": "0:09:21",
+        "1600M": "0:12:36",
+        "2000M": "0:15:51"
+      },
+      "tempo": {
+        "short": "0:08:10",
+        "mid": "0:08:20",
+        "long": "0:08:29"
+      },
+      "longRun": {
+        "halfMarathonPace": "0:08:47",
+        "fullMarathonPace": "0:09:13"
+      },
+      "completionTimes": {
+        "10K": "1:23:41",
+        "halfMarathon": "3:05:24",
+        "fullMarathon": "6:29:15"
+      }
+    }
+  ]
+}
+
