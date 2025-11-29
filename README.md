@@ -20,6 +20,7 @@ A Next.js web application that generates personalized running training plans bas
   - Predicted completion times
 - **Weekly Training Schedule**: Sample 7-day training plan tailored to your goal
 - **Weekly Mileage Progression**: Complete week-by-week distance breakdown with visual charts
+- [x] **CI Pipeline**: Automated linting and build checks via GitHub Actions
 - **Print-Friendly & PDF Export**: Optimized print styles and PDF download option
 
 ## Getting Started
